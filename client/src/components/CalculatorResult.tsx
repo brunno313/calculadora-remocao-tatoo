@@ -13,16 +13,16 @@ export default function CalculatorResult({
 }: CalculatorResultProps) {
   return (
     <div className="mb-6">
-      <div className="p-6 bg-secondary-dark text-white rounded-xl">
+      <div className="p-6 bg-primary text-white rounded-xl">
         <div className="flex items-center justify-center mb-4">
-          <Eraser className="h-10 w-10 text-accent mr-3" />
+          <Eraser className="h-10 w-10 text-white mr-3" />
           <h2 className="text-xl font-semibold">Resultado da Estimativa</h2>
         </div>
-        <p className="text-white/70 mb-4 text-center">Com base nos critérios selecionados, estimamos para remoção completa:</p>
+        <p className="text-white mb-4 text-center">Com base nos critérios selecionados, estimamos para remoção completa:</p>
         
         <div className="text-center my-6">
-          <span className="text-5xl font-bold text-accent">{result.sessions}</span>
-          <p className="text-lg mt-2">Sessões de remoção a laser</p>
+          <span className="text-5xl font-bold text-white">{result.sessions}</span>
+          <p className="text-lg mt-2 text-white">Sessões de remoção a laser</p>
         </div>
         
         <div className="bg-white/10 p-4 rounded-lg mt-4 text-sm">
