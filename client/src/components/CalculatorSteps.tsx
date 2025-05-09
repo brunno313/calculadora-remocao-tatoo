@@ -244,8 +244,8 @@ export default function CalculatorSteps({
 
       {/* Step 4: Ink Layer */}
       <div className={currentStep === 3 ? "block" : "hidden"}>
-        <h2 className="text-xl font-semibold mb-4 text-secondary-dark">Densidade da Tatuagem</h2>
-        <p className="text-secondary mb-4">Qual a profundidade/densidade da tatuagem a ser removida?</p>
+        <h2 className="text-xl font-semibold mb-4 text-gray-800">Densidade da Tatuagem</h2>
+        <p className="text-gray-600 mb-4">Qual a profundidade/densidade da tatuagem a ser removida?</p>
         
         <RadioGroup
           className="grid grid-cols-1 gap-4 mb-6"
@@ -263,7 +263,7 @@ export default function CalculatorSteps({
                 className="mr-3 mt-1"
               />
               <div>
-                <Label htmlFor={`layer-${layer.value}`} className="font-medium text-secondary-dark">
+                <Label htmlFor={`layer-${layer.value}`} className="font-medium text-gray-800">
                   {layer.label}
                 </Label>
                 <p className="text-sm text-gray-500 mt-1">{layer.description}</p>
@@ -275,8 +275,8 @@ export default function CalculatorSteps({
 
       {/* Step 5: Scars and Tissue */}
       <div className={currentStep === 4 ? "block" : "hidden"}>
-        <h2 className="text-xl font-semibold mb-4 text-secondary-dark">Cicatrizes e Alterações Teciduais</h2>
-        <p className="text-secondary mb-4">A área da tatuagem possui alguma alteração de tecido?</p>
+        <h2 className="text-xl font-semibold mb-4 text-gray-800">Cicatrizes e Alterações Teciduais</h2>
+        <p className="text-gray-600 mb-4">A área da tatuagem possui alguma alteração de tecido?</p>
         
         <RadioGroup
           className="grid grid-cols-1 gap-4 mb-6"
@@ -294,7 +294,7 @@ export default function CalculatorSteps({
                 className="mr-3 mt-1"
               />
               <div>
-                <Label htmlFor={`scar-${scar.value}`} className="font-medium text-secondary-dark">
+                <Label htmlFor={`scar-${scar.value}`} className="font-medium text-gray-800">
                   {scar.label}
                 </Label>
                 <p className="text-sm text-gray-500 mt-1">{scar.description}</p>
@@ -306,8 +306,8 @@ export default function CalculatorSteps({
 
       {/* Step 6: Colors */}
       <div className={currentStep === 5 ? "block" : "hidden"}>
-        <h2 className="text-xl font-semibold mb-4 text-secondary-dark">Cores na Tatuagem</h2>
-        <p className="text-secondary mb-4">Quais cores estão presentes na tatuagem a ser removida?</p>
+        <h2 className="text-xl font-semibold mb-4 text-gray-800">Cores na Tatuagem</h2>
+        <p className="text-gray-600 mb-4">Quais cores estão presentes na tatuagem a ser removida?</p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           {colors.map((color) => (
@@ -325,7 +325,7 @@ export default function CalculatorSteps({
               />
               <div className="flex items-center">
                 <span className={`w-5 h-5 rounded-full ${color.color} mr-2`}></span>
-                <Label htmlFor={`color-${color.value}`} className="font-medium text-secondary-dark">
+                <Label htmlFor={`color-${color.value}`} className="font-medium text-gray-800">
                   {color.label}
                 </Label>
               </div>
