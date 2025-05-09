@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import CalculatorForm from "@/components/CalculatorForm";
 import InfoSection from "@/components/InfoSection";
-import { Tag, GanttChart } from "lucide-react";
+import { Eraser, Zap } from "lucide-react";
 
 export default function TattooCalculator() {
   return (
@@ -10,12 +10,12 @@ export default function TattooCalculator() {
       <header className="bg-white shadow-md">
         <div className="container mx-auto px-4 py-6 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <Tag className="text-primary h-6 w-6" />
-            <h1 className="text-xl font-bold text-secondary-dark">Calculadora de Sessões</h1>
+            <Eraser className="text-primary h-6 w-6" />
+            <h1 className="text-xl font-bold text-secondary-dark">Calculadora de Remoção</h1>
           </div>
           <nav>
             <a 
-              href="mailto:contact@tattoocalculator.com" 
+              href="mailto:contact@tattooremoval.com" 
               className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition duration-300 text-sm font-medium inline-block"
             >
               Contato
@@ -28,10 +28,10 @@ export default function TattooCalculator() {
         {/* Intro Section */}
         <section className="mb-8 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-3 text-secondary-dark">
-            Calculadora de Sessões de Tatuagem
+            Calculadora de Sessões para Remoção de Tatuagem
           </h1>
           <p className="text-secondary max-w-2xl mx-auto">
-            Descubra quantas sessões você precisará para a sua tatuagem com base em diversos 
+            Descubra quantas sessões você precisará para remover sua tatuagem com base em diversos 
             fatores importantes. Preencha o formulário abaixo para obter uma estimativa personalizada.
           </p>
         </section>
@@ -53,11 +53,11 @@ export default function TattooCalculator() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <div className="flex items-center space-x-2">
-                <Tag className="text-accent h-5 w-5" />
-                <span className="text-lg font-semibold">Calculadora de Sessões</span>
+                <Eraser className="text-accent h-5 w-5" />
+                <span className="text-lg font-semibold">Calculadora de Remoção de Tatuagem</span>
               </div>
               <p className="text-sm text-gray-400 mt-2">
-                Ferramenta estimativa para profissionais e clientes de tatuagem
+                Ferramenta estimativa para profissionais e clientes de remoção de tatuagem
               </p>
             </div>
             
@@ -93,7 +93,7 @@ export default function TattooCalculator() {
           </div>
           
           <div className="border-t border-gray-700 mt-6 pt-6 text-center text-sm text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Calculadora de Sessões de Tatuagem. Todos os direitos reservados.</p>
+            <p>&copy; {new Date().getFullYear()} Calculadora de Remoção de Tatuagem. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>

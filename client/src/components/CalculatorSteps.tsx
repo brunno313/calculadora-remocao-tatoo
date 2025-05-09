@@ -95,23 +95,23 @@ export default function CalculatorSteps({
   const inkLayers: { value: InkLayer; label: string; description: string }[] = [
     { 
       value: "light", 
-      label: "Fina (Traços)", 
-      description: "Principalmente linhas, pouco preenchimento" 
+      label: "Superficial", 
+      description: "Tatuagem com pouca penetração na pele, geralmente mais clara" 
     },
     { 
       value: "medium", 
-      label: "Média", 
-      description: "Linhas e áreas de preenchimento moderado" 
+      label: "Moderada", 
+      description: "Profundidade média na pele, saturação normal" 
     },
     { 
       value: "heavy", 
-      label: "Grossa", 
-      description: "Muito preenchimento, trabalho denso" 
+      label: "Profunda", 
+      description: "Tinta bem penetrada na pele, saturação densa" 
     },
     { 
       value: "cover", 
       label: "Cobertura/Cover-up", 
-      description: "Cobrindo uma tatuagem existente" 
+      description: "Tatuagem sobre outra tatuagem anterior" 
     },
   ];
 
@@ -155,7 +155,7 @@ export default function CalculatorSteps({
       {/* Step 1: Skin Type */}
       <div className={currentStep === 0 ? "block" : "hidden"}>
         <h2 className="text-xl font-semibold mb-4 text-secondary-dark">Tipo de Pele</h2>
-        <p className="text-secondary mb-4">Selecione o tipo de pele onde a tatuagem será aplicada.</p>
+        <p className="text-secondary mb-4">Selecione o tipo de pele onde a tatuagem será removida.</p>
         
         <RadioGroup
           className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6"
@@ -186,7 +186,7 @@ export default function CalculatorSteps({
       {/* Step 2: Tattoo Location */}
       <div className={currentStep === 1 ? "block" : "hidden"}>
         <h2 className="text-xl font-semibold mb-4 text-secondary-dark">Localização da Tatuagem</h2>
-        <p className="text-secondary mb-4">Onde a tatuagem será aplicada no corpo?</p>
+        <p className="text-secondary mb-4">Onde está localizada a tatuagem a ser removida?</p>
         
         <RadioGroup
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-6"
@@ -213,8 +213,8 @@ export default function CalculatorSteps({
 
       {/* Step 3: Ink Quantity */}
       <div className={currentStep === 2 ? "block" : "hidden"}>
-        <h2 className="text-xl font-semibold mb-4 text-secondary-dark">Quantidade de Tinta</h2>
-        <p className="text-secondary mb-4">Qual o tamanho aproximado da tatuagem?</p>
+        <h2 className="text-xl font-semibold mb-4 text-secondary-dark">Tamanho da Tatuagem</h2>
+        <p className="text-secondary mb-4">Qual o tamanho aproximado da tatuagem a ser removida?</p>
         
         <RadioGroup
           className="grid grid-cols-1 gap-4 mb-6"
@@ -244,8 +244,8 @@ export default function CalculatorSteps({
 
       {/* Step 4: Ink Layer */}
       <div className={currentStep === 3 ? "block" : "hidden"}>
-        <h2 className="text-xl font-semibold mb-4 text-secondary-dark">Camada de Tinta</h2>
-        <p className="text-secondary mb-4">Que tipo de cobertura a tatuagem terá?</p>
+        <h2 className="text-xl font-semibold mb-4 text-secondary-dark">Densidade da Tatuagem</h2>
+        <p className="text-secondary mb-4">Qual a profundidade/densidade da tatuagem a ser removida?</p>
         
         <RadioGroup
           className="grid grid-cols-1 gap-4 mb-6"
@@ -276,7 +276,7 @@ export default function CalculatorSteps({
       {/* Step 5: Scars and Tissue */}
       <div className={currentStep === 4 ? "block" : "hidden"}>
         <h2 className="text-xl font-semibold mb-4 text-secondary-dark">Cicatrizes e Alterações Teciduais</h2>
-        <p className="text-secondary mb-4">A área onde será feita a tatuagem possui alguma alteração de tecido?</p>
+        <p className="text-secondary mb-4">A área da tatuagem possui alguma alteração de tecido?</p>
         
         <RadioGroup
           className="grid grid-cols-1 gap-4 mb-6"
@@ -306,8 +306,8 @@ export default function CalculatorSteps({
 
       {/* Step 6: Colors */}
       <div className={currentStep === 5 ? "block" : "hidden"}>
-        <h2 className="text-xl font-semibold mb-4 text-secondary-dark">Cores</h2>
-        <p className="text-secondary mb-4">Quais cores serão utilizadas na tatuagem?</p>
+        <h2 className="text-xl font-semibold mb-4 text-secondary-dark">Cores na Tatuagem</h2>
+        <p className="text-secondary mb-4">Quais cores estão presentes na tatuagem a ser removida?</p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           {colors.map((color) => (

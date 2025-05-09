@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CalculationResult } from "@/types/calculator";
+import { Eraser } from "lucide-react";
 
 interface CalculatorResultProps {
   result: CalculationResult;
@@ -13,21 +14,25 @@ export default function CalculatorResult({
   return (
     <div className="mb-6">
       <div className="p-6 bg-secondary-dark text-white rounded-xl">
-        <h2 className="text-xl font-semibold mb-2">Resultado da Estimativa</h2>
-        <p className="text-white/70 mb-4">Com base nos critérios selecionados, estimamos:</p>
+        <div className="flex items-center justify-center mb-4">
+          <Eraser className="h-10 w-10 text-accent mr-3" />
+          <h2 className="text-xl font-semibold">Resultado da Estimativa</h2>
+        </div>
+        <p className="text-white/70 mb-4 text-center">Com base nos critérios selecionados, estimamos para remoção completa:</p>
         
         <div className="text-center my-6">
           <span className="text-5xl font-bold text-accent">{result.sessions}</span>
-          <p className="text-lg mt-2">Sessões de tatuagem</p>
+          <p className="text-lg mt-2">Sessões de remoção a laser</p>
         </div>
         
         <div className="bg-white/10 p-4 rounded-lg mt-4 text-sm">
           <p className="mb-1">Esta é apenas uma estimativa. O número real de sessões pode variar dependendo de:</p>
           <ul className="list-disc pl-5 space-y-1">
-            <li>Complexidade do design final</li>
-            <li>Tolerância à dor do cliente</li>
-            <li>Técnica e equipamento do tatuador</li>
-            <li>Tempo de cicatrização entre sessões</li>
+            <li>Idade da tatuagem (tatuagens mais antigas podem ser mais fáceis de remover)</li>
+            <li>Qualidade do equipamento de remoção a laser utilizado</li>
+            <li>Resposta individual do seu corpo ao tratamento</li>
+            <li>Intervalo entre as sessões (geralmente 6-8 semanas)</li>
+            <li>Cuidados pós-tratamento seguidos corretamente</li>
           </ul>
         </div>
       </div>
