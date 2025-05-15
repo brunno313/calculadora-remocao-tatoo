@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Deploy quando houver pushes para a branch main
+      - main
 
 permissions:
   contents: read
@@ -28,10 +28,10 @@ jobs:
 
       - name: Build application
         run: |
-          npm run build
-          # Criar um arquivo .nojekyll para prevenir processamento Jekyll
+          npm ci
+          npx vite build --config vite.config.js
           touch dist/.nojekyll
-        
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
 

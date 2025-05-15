@@ -6,8 +6,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import TattooCalculator from "@/pages/TattooCalculator";
 
-// No arquivo de build para GitHub Pages, adicionaremos a configuração de hash routing
-
 function Router() {
   return (
     <Switch>
