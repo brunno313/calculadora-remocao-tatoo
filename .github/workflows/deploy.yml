@@ -28,8 +28,7 @@ jobs:
 
       - name: Build application
         run: |
-          npm ci
-          npx vite build --config vite.config.js
+          npm run build
           touch dist/.nojekyll
 
       - name: Setup Pages
