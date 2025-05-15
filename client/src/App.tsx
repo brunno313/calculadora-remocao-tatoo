@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, Router } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -6,13 +6,17 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import TattooCalculator from "@/pages/TattooCalculator";
 
-function Router() {
+const base = import.meta.env.VITE_BASE_PATH || "/calculadora-remocao-tatoo";
+
+function AppRouter() {
   return (
-    <Switch>
-      <Route path="/" component={TattooCalculator} />
-      {/* Fallback to 404 */}
-      <Route component={NotFound} />
-    </Switch>
+    <Router base={base}>
+      <Switch>
+        <Route path="/" component={TattooCalculator} />
+        {/* Fallback to 404 */}
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
   );
 }
 
@@ -21,7 +25,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Router />
+        <AppRouter />
       </TooltipProvider>
     </QueryClientProvider>
   );
